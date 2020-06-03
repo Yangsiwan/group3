@@ -62,6 +62,9 @@ public class Chunmaji {
 		else menu();
 	}
 	public static void three() throws InterruptedException {  //1. 전투 2. hp가 올라가는 강 3. trash
+		if(attack.success()&&river.success()&&trash.success()) {
+			System.exit(0); // out
+		}
 		System.out.println("                                                 ");
 		System.out.println("There are three crossroads.");
 		System.out.println("Which one would you like to choose? (You have to go all three places anyway.)");
@@ -72,8 +75,11 @@ public class Chunmaji {
 		choose = sc.nextInt();
 	    switch(choose) {
 	     case 1 : 
-	    	attack at = new attack();
-	    	at.show();
+	    	 if(attack.success()==false) attack.entry();
+				else {
+					System.out.println("\nYou already success the game.");
+				    three();
+				}
 	    	break;
 	     case 2 :
 				if(river.success()==false) river.show();
@@ -94,7 +100,6 @@ public class Chunmaji {
 	    	 three();
 	    }  
 	 }
-
    }
 	
 
