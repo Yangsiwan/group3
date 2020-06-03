@@ -5,10 +5,10 @@ public class Chunmaji {
 	static Scanner sc = new Scanner(System.in);
 	static int choose;
 	public static void show() {
-	System.out.println("--------------------------------[Chunmaji]--------------------------------");
-	System.out.println("Here is Chunmaji.");
+	System.out.println("==============================[Chunmaji]==============================");
+	System.out.println("Here is Cheonmaji.");
 	System.out.println("It is a quiet forest that only students of Handong University know.");
-    System.out.println("Would you like to start your journey to Chunmaji?");
+    System.out.println(Character.getName()+", would you like to start your journey to Cheonmaji?");
     System.out.println("");
     menu();
 	}
@@ -57,7 +57,7 @@ public class Chunmaji {
 		if(choice.equals("Y")) {
 			// go main to choose other menu
 			System.out.println("Have a good time in Handong University.");
-			System.exit(0);
+			Main.main(null);
 		}
 		else menu();
 	}
@@ -66,6 +66,7 @@ public class Chunmaji {
 			System.exit(0);
 		}
 		System.out.println("                                                 ");
+		System.out.println("==============================[Cross Road]==============================");
 		System.out.println("There are three crossroads.");
 		System.out.println("Which one would you like to choose? (You have to go all three places anyway.)");
 		System.out.println("========================");

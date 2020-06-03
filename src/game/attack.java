@@ -50,7 +50,7 @@ public class attack {
 	        //Step 4 Battle
 	        do {
 	            Battle();
-	        }while(attack.playerMembers != 0 && attack.computerMembers != 0);
+	        }while(attack.playerMembers != 0 && attack.computerMembers != 0 &&attack.computerMembers!=15);
 
 	        //Step 5 - Game over
 	        gameOver();
@@ -134,7 +134,7 @@ public class attack {
 	        printMap();
 
 	        System.out.println();
-	        System.out.println("Your members: " + attack.playerMembers + " | Computer members: " + attack.computerMembers);
+	        System.out.println("Your members: " + attack.playerMembers + " | WildBoar members: " + attack.computerMembers);
 	        System.out.println();
 	    }
 	    public static void stopwatch(int onOff) {
@@ -230,14 +230,16 @@ public class attack {
 	    }
 	    
 	    public static void gameOver() throws InterruptedException{ //game over
-	        System.out.println("Your members: " + attack.playerMembers + " | Computer members: " + attack.computerMembers);
+	        System.out.println("Your members: " + attack.playerMembers + " | WildBoar members: " + attack.computerMembers);
 	        if(attack.playerMembers > 0 && attack.computerMembers <= 0) {
 	            System.out.println("Wow! You won the battle :)");
 	            succ = true;
 	        }
 	        else {
 	            System.out.println("Sorry, you lost the battle");
-	            //Character.growHp(-50);
+	            Character.growHp(-50);
+	            System.out.println("Your Hp decrease 50.");
+	 		    System.out.println("Now, your HP is "+ Character.getHp()+".");
 	        }
 	        System.out.println();
 	        Chunmaji.three();

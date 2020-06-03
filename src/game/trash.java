@@ -11,7 +11,7 @@ public class trash {
 	}
 	
     public static void show() throws InterruptedException {
-       System.out.println("-----------------------------[Right Side of Chunmaji]-----------------------------");
+       System.out.println("==============================[Right Side of Chunmaji]==============================");
 	   System.out.println("");
 	   System.out.println("Cleaning lady appeared!");
 	   Thread.sleep(500);
@@ -68,7 +68,10 @@ public class trash {
 	   }
 	   else {
 		   System.out.println("");
+		   Character.growHp(-10);
 		   System.out.println("[Game failed]");
+		   System.out.println("Your Hp decrease 10.");
+		   System.out.println("Now, your HP is "+ Character.getHp()+".");
 		   Chunmaji.three();
 	   }
    }
