@@ -1,7 +1,7 @@
 package game;
 
 public class Character {
-	private String name;
+	private static String name;
 	private static int hp;
    public Character(String name, int hp) {
 	   this.name = name;
@@ -13,8 +13,9 @@ public class Character {
 	}
    public static void growHp(int grow) {
 	   hp+=grow;
+	   if(hp<=0) main.gameover();
    }
-public String getName() {
+public static String getName() {
 	   return name;
    }
    public static int getHp() {
