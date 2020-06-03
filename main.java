@@ -5,7 +5,7 @@ public class main {
 
 	static String name;
 	static int [] clear= new int [10];
-	static String [] Sname= {"ÇĞ°ü","¿À¼®°ü","´ºÅÏÈ¦","Çöµ¿È¦","¸ÅÁ¡","¾ËÆÄ¼­Á¡","Ãµ¸¶Áö","GLC","Ã¤ÇÃ","È÷µùÅ©ÇÊµå"};
+	static String [] Sname= {"í•™ê´€","ì˜¤ì„ê´€","ë‰´í„´í™€","í˜„ë™í™€","ë§¤ì ","ì•ŒíŒŒì„œì ","ì²œë§ˆì§€","GLC","ì±„í”Œ","íˆë”©í¬í•„ë“œ"};
 	public static void main(String[] args) { 
 		 int check=1;
 		 int hp=10;
@@ -32,6 +32,7 @@ public class main {
 					 if(clear[i]==0)
 						 System.out.println(i+1+" : "+Sname[i]);							 
 				menu=scn.nextInt();
+				 scn.nextLine();
 				menu--;
 				System.out.println(menu);
 				if(menu>9||menu<-1) {
@@ -58,19 +59,19 @@ public class main {
 						System.out.println(hp);
 						 
 						 break;
-					 case 3: //°¢ °ÔÀÓ
+					 case 3: //ê° ê²Œì„
 						 break;
-					 case 4: //°¢ °ÔÀÓ
+					 case 4: //ê° ê²Œì„
 						 break;
-					 case 5: //°¢ °ÔÀÓ
+					 case 5: //ê° ê²Œì„
 						 break;
-					 case 6: //°¢ °ÔÀÓ
+					 case 6: //ê° ê²Œì„
 						 break;
-					 case 7: //°¢ °ÔÀÓ
+					 case 7: //ê° ê²Œì„
 						 break;
-					 case 8: //°¢ °ÔÀÓ
+					 case 8: //ê° ê²Œì„
 						 break;
-					 case 9: //°¢ °ÔÀÓ
+					 case 9: //ê° ê²Œì„
 						 break;
 				}
 				 
