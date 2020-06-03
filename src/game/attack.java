@@ -17,16 +17,16 @@ public class attack {
 		  return succ;
 	   }
         public static void entry() throws InterruptedException {
-        	Main.main(null);
+        	main(null);
         }
 	    public static void main(String[] args) throws InterruptedException {
-	    	System.out.println("-----------------------------[Forward of Chunmaji]-----------------------------");
+	    	System.out.println("=============================[Forward of Chunmaji]=============================");
 			Thread.sleep(500);
 			System.out.println("===============================================================================");
 			System.out.println("                           Wild Boar appeared!");
 			System.out.println("===============================================================================");
 			Thread.sleep(500);
-		    System.out.println("You can't run away. You have to fight.");
+		    System.out.println("SaeSeom : You can't run away. You have to fight.");
 		    System.out.println("\n* Rule");
 		    System.out.println(" *  A player will place 5 of their member on a 10 by 10 grid.\n" + 
 		    		" *  The computer player will deploy five members on the same grid.\n" + 
@@ -50,7 +50,7 @@ public class attack {
 	        //Step 4 Battle
 	        do {
 	            Battle();
-	        }while(attack.playerMembers != 0 && attack.computerMembers != 0 &&attack.computerMembers!=15);
+	        }while(attack.playerMembers != 0 && attack.computerMembers != 0);
 
 	        //Step 5 - Game over
 	        gameOver();
@@ -237,9 +237,7 @@ public class attack {
 	        }
 	        else {
 	            System.out.println("Sorry, you lost the battle");
-	            Character.growHp(-50);
-	            System.out.println("Your Hp decrease 50.");
-	 		    System.out.println("Now, your HP is "+ Character.getHp()+".");
+	            //Character.growHp(-50);
 	        }
 	        System.out.println();
 	        Chunmaji.three();

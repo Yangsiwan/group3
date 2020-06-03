@@ -11,7 +11,7 @@ public class trash {
 	}
 	
     public static void show() throws InterruptedException {
-       System.out.println("==============================[Right Side of Chunmaji]==============================");
+       System.out.println("==========================[Right Side of Chunmaji]==========================");
 	   System.out.println("");
 	   System.out.println("Cleaning lady appeared!");
 	   Thread.sleep(500);
@@ -60,6 +60,7 @@ public class trash {
 			break;
 		}
 	  }
+	   
 	   if(correct) {  
 		   System.out.println("");
 		   System.out.println("[Game success]");
@@ -76,3 +77,4 @@ public class trash {
 	   }
    }
 }
+

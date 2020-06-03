@@ -6,9 +6,9 @@ public class Chunmaji {
 	static int choose;
 	public static void show() {
 	System.out.println("==============================[Chunmaji]==============================");
-	System.out.println("Here is Cheonmaji.");
-	System.out.println("It is a quiet forest that only students of Handong University know.");
-    System.out.println(Character.getName()+", would you like to start your journey to Cheonmaji?");
+	System.out.println("SaeSeom : Here is Cheonmaji.");
+	System.out.println("SaeSeom :It is a quiet forest that only students of Handong University know.");
+    System.out.println("SaeSeom : "+Character.getName()+", would you like to start your journey to Cheonmaji?");
     System.out.println("");
     menu();
 	}
@@ -67,8 +67,8 @@ public class Chunmaji {
 		}
 		System.out.println("                                                 ");
 		System.out.println("==============================[Cross Road]==============================");
-		System.out.println("There are three crossroads.");
-		System.out.println("Which one would you like to choose? (You have to go all three places anyway.)");
+		System.out.println("SaeSeom : There are three crossroads.");
+		System.out.println("SaeSeom : Which one would you like to choose? (You have to go all three places anyway.)");
 		System.out.println("========================");
 		System.out.println("1.Forward 2.Left 3.Right");
 		System.out.println("========================");
@@ -103,5 +103,3 @@ public class Chunmaji {
 	 }
 
    }
-	
-

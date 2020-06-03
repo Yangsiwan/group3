@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 	static String name;
-	static int hp=10;
+	static int hp=50;
 	static int [] clear= new int [10];
 	static String [] Sname= {"GLC","Hyoam Chaple","Cheonmaji","Store","Alpha Stationery","Student Union","Hiddink Field","Oseok Hall","Newton Hall","Hyundong Hall"};
 	 public static void menu() {
@@ -47,7 +47,7 @@ public class Main {
 					 System.out.println("You Typed Wrong Number!");
 			 }
 			 Character ch = new Character(name,hp); //set name, hp
-			 System.out.println("Name : "+ch.getName()+"Hp :"+ch.getHp());
+			 System.out.println("Name : "+ch.getName()+" Hp :"+ch.getHp());
 			 for(;1==check()||hp>0;) {
 				 System.out.println("Where should we go?");
 				 System.out.println("0 : Save");
@@ -80,7 +80,8 @@ public class Main {
 						 break;
 					 case 3: Chunmaji.show();
 						 break;
-					 case 4: //�� ����
+					 case 4: 
+						 Store.show();
 						 break;
 					 case 5: //�� ����
 						 break;
@@ -98,6 +99,9 @@ public class Main {
 			 if(hp<0) {
 				 System.out.println("Game is over");
 			 }
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	 }
 	 public static void gameover() {
