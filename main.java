@@ -4,12 +4,11 @@ import java.util.Scanner;
 public class main {
 
 	static String name;
-	static int hp=10;
 	static int [] clear= new int [10];
 	static String [] Sname= {"학관","오석관","뉴턴홀","현동홀","매점","알파서점","천마지","GLC","채플","히딩크필드"};
 	public static void main(String[] args) { 
 		 int check=1;
-		 
+		 int hp=10;
 		 int menu;
 		 try (Scanner scn = new Scanner(System.in)) {
 			System.out.println("Welcome to Your Hanst!!");
@@ -46,14 +45,18 @@ public class main {
 					case -1: //save();
 						 break;
 					case 0:
-						game c=new game(hp);
-						hp=- c.cgame();
-						clear[menu]=1;
+						
+						 break;
+					 case 1: TypingGame t=new TypingGame();
+					 hp-=t.main();
+					 clear[menu]=1;
 						System.out.println(hp);
 						 break;
-					 case 1: //각 게임
-						 break;
-					 case 2: //각 게임
+					 case 2: cgame c=new cgame();
+						hp=- c.main(name);
+						clear[menu]=1;
+						System.out.println(hp);
+						 
 						 break;
 					 case 3: //각 게임
 						 break;
