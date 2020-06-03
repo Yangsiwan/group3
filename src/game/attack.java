@@ -17,7 +17,7 @@ public class attack {
 		  return succ;
 	   }
         public static void entry() throws InterruptedException {
-        	main(null);
+        	Main.main(null);
         }
 	    public static void main(String[] args) throws InterruptedException {
 	    	System.out.println("-----------------------------[Forward of Chunmaji]-----------------------------");

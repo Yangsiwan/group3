@@ -25,6 +25,7 @@ public class Main {
 		   System.out.println("|             |    (3)    |            |");
 		   System.out.println("========================================");
 	   }
+	
 	public static void main(String[] args) { 
 		 int check=1;
 		 

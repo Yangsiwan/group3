@@ -13,7 +13,7 @@ public class Character {
 	}
    public static void growHp(int grow) {
 	   hp+=grow;
-	   if(hp<=0) Main.gameover();
+	   if(hp<=0) main.gameover();
    }
 public static String getName() {
 	   return name;
