@@ -3,19 +3,34 @@ package main;
 import java.util.Scanner;
 
 public class Main {
-
 	static String name;
 	static int hp=10;
 	static int [] clear= new int [10];
-	static String [] Sname= {"ÇÐ°ü","¿À¼®°ü","´ºÅÏÈ¦","Çöµ¿È¦","¸ÅÁ¡","¾ËÆÄ¼­Á¡","Ãµ¸¶Áö","GLC","Ã¤ÇÃ","È÷µùÅ©ÇÊµå"};
-	
+	static String [] Sname= {"GLC","Hyoam Chaple","Cheonmaji","Store","Alpha Stationery","Student Union","Hiddink Field","Oseok Hall","Newton Hall","Hyundong Hall"};
+	 public static void menu() {
+		   System.out.println("===================[MAP]================");
+		   System.out.println("| -----    -----                       |");
+		   System.out.println("|| (8) |  | (9) |                      |");
+		   System.out.println("| -----    -----                       |");
+		   System.out.println("| -----       -------                  |");
+		   System.out.println("|| (7) |     |  (10) |        -----    |");
+		   System.out.println("| -----       -------        | (1) |   |");
+		   System.out.println("| -----                       -----    |");
+		   System.out.println("||     | ----                 -----    |");
+		   System.out.println("|| (6) || (5)|               |     |   |");
+		   System.out.println("| -----  ----                | (2) |   |");
+		   System.out.println("|     -----                  |     |   |");
+		   System.out.println("|    | (4) |   -----------    -----    |");
+		   System.out.println("|     -----   |           |            |");
+		   System.out.println("|             |    (3)    |            |");
+		   System.out.println("========================================");
+	   }
 	public static void main(String[] args) { 
 		 int check=1;
 		 
-		 
-		 
 		 int menu;
 		 try (Scanner scn = new Scanner(System.in)) {
+			System.out.println("========================================");
 			System.out.println("Welcome to Your Hanst!!");
 			 System.out.printf("Please type your name:");
 			 while(check==1) {
@@ -30,14 +45,17 @@ public class Main {
 				 else
 					 System.out.println("You Typed Wrong Number!");
 			 }
+			 Character ch = new Character(name,hp); //set name, hp
+			 System.out.println("Name : "+ch.getName()+"Hp :"+ch.getHp());
 			 for(;1==check()||hp>0;) {
 				 System.out.println("Where should we go?");
 				 System.out.println("0 : Save");
 				 for(int i=0;i<10;i++)
 					 if(clear[i]==0)
-						 System.out.println(i+1+" : "+Sname[i]);							 
+						 System.out.println(i+1+" : "+Sname[i]);
+			    menu();
 				menu=scn.nextInt();
-				menu--;
+				//menu--;
 				System.out.println(menu);
 				if(menu>9||menu<-1) {
 					System.out.println("You Typed Wrong Number!");
@@ -52,31 +70,30 @@ public class Main {
 					case 0:
 						//Ccgame c=new Ccgame(hp);
 						//hp=- c.cgame();
-						//clear[menu]=1;
-						//System.out.println(hp);
+						clear[menu]=1;
+						System.out.println(hp);
 						 break;
-					 case 1: //°¢ °ÔÀÓ
+					 case 1: 
 						 break;
-					 case 2: //°¢ °ÔÀÓ
-						 
+					 case 2: //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 						 break;
-					 case 3: //°¢ °ÔÀÓ
+					 case 3: 
 						 break;
-					 case 4: //°¢ °ÔÀÓ
+					 case 4: //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 						 break;
-					 case 5: //°¢ °ÔÀÓ
+					 case 5: //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 						 TicTac tic = new TicTac();
-						 tic.tt(args);
+						 tic.tt();
 						 break;
-					 case 6: //°¢ °ÔÀÓ
+					 case 6: //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 						 break;
-					 case 7: //°¢ °ÔÀÓ
-						 break;
-					 case 8: //°¢ °ÔÀÓ
-						 break;
-					 case 9: //°¢ °ÔÀÓ
+					 case 7: //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 						 Predict predict = new Predict();
-						 predict.pd(args);
+						 predict.pd();
+						 break;
+					 case 8: //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+						 break;
+					 case 9: //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 						 break;
 				}
 				 
@@ -85,6 +102,10 @@ public class Main {
 				 System.out.println("Game is over");
 			 }
 		}
+	 }
+	 public static void gameover() {
+		 System.out.println("\nGame over");
+		 System.exit(0);
 	 }
 	 public	static int check() {
 		 for(int i=0;i<10;i++) {
