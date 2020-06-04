@@ -8,7 +8,8 @@ public class Match {
 	int team1 = 0, team2 = 0;
 	String check = null;
 	String predict = null;
-	
+	String output;
+
 	//Game 1 method
 	boolean Game1() {
 		System.out.println("\n[Match 1]\n");
@@ -71,7 +72,7 @@ public class Match {
 				Thread.sleep(1000);
 			}
 			catch(InterruptedException e) {
-				return true ;
+				return false ;
 			}
 			System.out.println("Vision finally wins.\n.\n.\n.");
 		}
@@ -110,18 +111,18 @@ public class Match {
 				Thread.sleep(1000);
 			}
 			catch(InterruptedException e) {
-				return true ;
+				return false ;
 			}
 			System.out.println("Bethel is taking the victory.\n.\n.\n.");
 		}
 		
 		//If users' input and team's name are same.
 		if(predict.equals(check)) {
-			System.out.println("Your prediction is correct!");
+			System.out.println("Your prediction is correct!\n");
 			return true;
 		}
 		else {
-			System.out.println("Your prediction is wrong...");
+			System.out.println("Your prediction is wrong...\n");
 			return false;
 		}
 	}
@@ -182,7 +183,7 @@ public class Match {
 				Thread.sleep(1000);
 			}
 			catch(InterruptedException e) {
-				return true ;
+				return false ;
 			}
 			System.out.println("Lothem finally wins.\n.\n.\n.");
 		}
@@ -216,17 +217,17 @@ public class Match {
 				Thread.sleep(1000);
 			}
 			catch(InterruptedException e) {
-				return true ;
+				return false ;
 			}
 			System.out.println("Creaion finally wins.\n.\n.\n.");
 		}
 		
 		if(predict.equals(check)) {
-			System.out.println("Your prediction is correct!");
+			System.out.println("Your prediction is correct!\n");
 			return true;
 		}
 		else {
-			System.out.println("Your prediction is wrong...");
+			System.out.println("Your prediction is wrong...\n");
 			return false;
 		}
 	}
@@ -285,11 +286,11 @@ public class Match {
 				Thread.sleep(800);
 				System.out.println("Match is over. It was the best game ever.");
 				Thread.sleep(500);
-				System.out.println("Lothem: " + team1 + " Creation: " + team2);
+				System.out.println("Grace: " + team1 + " International: " + team2);
 				Thread.sleep(1000);
 			}
 			catch(InterruptedException e) {
-				return true ;
+				return false ;
 			}
 			System.out.println("Grace finally wins.\n.\n.\n.");
 		}
@@ -321,21 +322,20 @@ public class Match {
 				Thread.sleep(800);
 				System.out.println("Match is over. It was the best game ever.");
 				Thread.sleep(500);
-				System.out.println("Lothem: " + team1 + " Creation: " + team2);
+				System.out.println("Grace: " + team1 + " International: " + team2);
 				Thread.sleep(1000);
 			}
 			catch(InterruptedException e) {
-				return true ;
+				return false ;
 			}
 			System.out.println("International finally wins.\n.\n.\n.");
 		}
-		
 		if(predict.equals(check)) {
-			System.out.println("Your prediction is correct!");
+			System.out.println("Your prediction is correct!\n");
 			return true;
 		}
 		else {
-			System.out.println("Your prediction is wrong...");
+			System.out.println("Your prediction is wrong...\n");
 			return false;
 		}
 	
