@@ -8,11 +8,11 @@ import java.util.Scanner;
 
 public class TicTac {
 	
-	//contain inputs arraylist
+	//contain inputs in arraylist
 	static ArrayList<Integer> playerPositions = new ArrayList<Integer>();
 	static ArrayList<Integer> cashierPositions = new ArrayList<Integer>();
 	
-	public static void tt(String[] args) {
+	public static void tt() {
 		
 		try {
 			System.out.println("Cashier: Welcome to Alpha Store!");
@@ -29,14 +29,17 @@ public class TicTac {
 			Thread.sleep(1000);
 			System.out.println("Player: But I want this game.");
 			Thread.sleep(1000);
-			System.out.println("Cashier: Hmm... Ok, but here is the deal,\nIf you beat the game with me, \nI will give it to you for free.");
+			System.out.println("Cashier: Hmm... Ok, but here is the deal,\n\t If you beat the game with me, \n\t I will give it to you for free.");
 			Thread.sleep(1000);
+			System.out.println("Cashier: Only winning is the key. No tie.");
 			System.out.println("Player: Got it!");
 			Thread.sleep(1000);
-			System.out.println("Cashier: Here is the rules.");
+			System.out.println("Cashier: Here is the game rules.");
 			Thread.sleep(1000);
+			System.out.println();
 			System.out.println("[Tic Tac Toe Rule]");
 			System.out.println("1. The game is played on a grid that's 3 squares by 3 squares.\n2. You are X, your friend is O. Players take turns putting their marks in empty squares.\n3. The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner.\n4. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.");
+			System.out.println("\nBasically, you need to make three in a row.");
 			Thread.sleep(1000);
 		}
 		catch (InterruptedException e) {
@@ -95,6 +98,7 @@ public class TicTac {
 			result = checkWinner();
 			if(result.length()>0) {
 				System.out.println(result);
+				System.out.println();
 				System.out.println("Result");
 				printGameBoard(gameBoard);
 				System.out.println();
@@ -192,7 +196,7 @@ public class TicTac {
 				return "Congratulations you won!";
 			}
 			else if(cashierPositions.containsAll(l)) {
-				return "I won! Sorry";
+				return "I won! Sorry.";
 			}
 			else if(!playerPositions.containsAll(l) && !cashierPositions.containsAll(l) && playerPositions.size() + cashierPositions.size() == 9) {
 				return "DRAW!";
