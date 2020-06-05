@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Match {
+public class Match extends Predict {
 	Scanner key = new Scanner(System.in);
 	Random ran = new Random();
 	int team1 = 0, team2 = 0;
@@ -24,7 +24,7 @@ public class Match {
 		System.out.println("Which team you think will win?");
 		
 		//It continues to ask the right answers.
-		while(true) {
+		while(pass) {
 			System.out.print("Team name: ");
 			predict = key.next();
 			if(!predict.equals("Vision") && !predict.equals("Bethel"))
@@ -33,7 +33,7 @@ public class Match {
 		}
 		
 		//It generates random numbers based on teams' abilities.
-		while(true) {
+		while(pass) {
 			team1 = ran.nextInt(7); //generates random number between 0~6
 			team2 = ran.nextInt(1); //generates random number between 0~1
 			//checks if it draws.
@@ -138,7 +138,7 @@ public class Match {
 		System.out.println("|  TOTAL |   88   |   85   |");
 		System.out.println("----------------------------");
 		System.out.println("Which team you think will win?");
-		while(true) {
+		while(pass) {
 			System.out.print("Team name: ");
 			predict = key.next();
 			if(!predict.equals("Lothem") && !predict.equals("Creation"))
@@ -146,7 +146,7 @@ public class Match {
 			else break;
 		}
 		
-		while(true) {
+		while(pass) {
 			team1 = ran.nextInt(5); //generates random number between 0~4
 			team2 = ran.nextInt(3); //generates random number between 0~2
 			if(team1 != team2) break;
@@ -243,7 +243,7 @@ public class Match {
 		System.out.println("|  TOTAL |   87   |   90   |");
 		System.out.println("----------------------------");
 		System.out.println("Which team you think will win?");
-		while(true) {
+		while(pass) {
 			System.out.print("Team name: ");
 			predict = key.next();
 			if(!predict.equals("Grace") && !predict.equals("International"))
@@ -251,7 +251,7 @@ public class Match {
 			else break;
 		}
 		
-		while(true) {
+		while(pass) {
 			team1 = ran.nextInt(4); //generates random number between 0~3
 			team2 = ran.nextInt(6); //generates random number between 0~5
 			if(team1 != team2) break;
