@@ -1,26 +1,25 @@
-package Java;
 	import java.util.Scanner;
 	import java.util.Random;
 
 	public class TypingGame {
 	public	boolean tgmain() {
-		int Error=0;//Æ²¸° È½¼ö
-		int damage=0;//À¯Àú°¡ ¹ŞÀ» µ¥¹ÌÁö
+		int Error=0;//í‹€ë¦° íšŸìˆ˜
+		int damage=0;//ìœ ì €ê°€ ë°›ì„ ë°ë¯¸ì§€
 		long end=0;
 		Random rand=new Random();
 		char chara;
-		chara=(char)(rand.nextInt(8)+65);//·£´ıÀ¸·Î Ã³À½ ¾ËÆÄºª 16°³Áß ÇÏ³ª¸¦ ±İÁö ¾ËÆÄºªÀ¸·Î Á¤ÇÑ´Ù.
-		String ch=String.valueOf(chara);//ÇØ´ç ¾ËÆÄºªÀ» ¹ØÀÇ ÇÔ¼öµé¿¡¼­ »ç¿ëÇÏ±â À§ÇØ StringÀ¸·Î ¹Ù²ãÁØ´Ù.
+		chara=(char)(rand.nextInt(8)+65);//ëœë¤ìœ¼ë¡œ ì²˜ìŒ ì•ŒíŒŒë²³ 16ê°œì¤‘ í•˜ë‚˜ë¥¼ ê¸ˆì§€ ì•ŒíŒŒë²³ìœ¼ë¡œ ì •í•œë‹¤.
+		String ch=String.valueOf(chara);//í•´ë‹¹ ì•ŒíŒŒë²³ì„ ë°‘ì˜ í•¨ìˆ˜ë“¤ì—ì„œ ì‚¬ìš©í•˜ê¸° ìœ„í•´ Stringìœ¼ë¡œ ë°”ê¿”ì¤€ë‹¤.
 		char Chara;
-		Chara=(char)((int)chara+32); //´ë¹®ÀÚµµ µ¿ÀÏÇÏ°Ô ¸¸µé¾îÁØ´Ù/
+		Chara=(char)((int)chara+32); //ëŒ€ë¬¸ìë„ ë™ì¼í•˜ê²Œ ë§Œë“¤ì–´ì¤€ë‹¤/
 		String Ch=String.valueOf(Chara);
 		String LP[]= {"The Little Prince","Onece when I was six years old I saw magnificent picture in a book,","called True Stories from Nature, about the primeval forest.","It was a picture of a boa constrictor in the act of swallowings an animal.","Here is a copy of drawing."};
-		//Å×½ºÆ®¿ë ¹®ÀÚ¿­ ÃÊ±âÈ­
+		//í…ŒìŠ¤íŠ¸ìš© ë¬¸ìì—´ ì´ˆê¸°í™”
 		Scanner src = new Scanner(System.in);
-			String temp;//À¯ÀúÀÇ ÀÎÇ²À» ¹ŞÀ» º¯¼ö
-			String Lptemp;//±âÁ¸ ¹®ÀÚ¿­ ¿¡¼­ ±İÁö ¾ËÆÄºªÀ» Á¦ÇÑ°ÍÀ» ÀúÀåÇÏ±â À§ÇÑ º¯¼ö
-			int time;//°É¸° ½Ã°£À» ÃøÁ¤ÇÏ±â À§ÇÑ º¯¼ö
-			//¼³¸í¹®
+			String temp;//ìœ ì €ì˜ ì¸í’‹ì„ ë°›ì„ ë³€ìˆ˜
+			String Lptemp;//ê¸°ì¡´ ë¬¸ìì—´ ì—ì„œ ê¸ˆì§€ ì•ŒíŒŒë²³ì„ ì œí•œê²ƒì„ ì €ì¥í•˜ê¸° ìœ„í•œ ë³€ìˆ˜
+			int time;//ê±¸ë¦° ì‹œê°„ì„ ì¸¡ì •í•˜ê¸° ìœ„í•œ ë³€ìˆ˜
+			//ì„¤ëª…ë¬¸
 			System.out.println("Hello Welcome to OSuk Library");
 			System.out.println("We will test your typing skills here.");
 			System.out.println("Typing technology is one of the most important skills in college.");
@@ -31,54 +30,54 @@ package Java;
 			System.out.println("For Example\n \"Apple\" \n Alphabet to exclude: A\n Answer: pple");
 			System.out.println("\nAlso, if you want to give up this game, you can just type: END");
 			System.out.println("\n\nLet's start it!");
-			//Ãâ·Â¹®
+			//ì¶œë ¥ë¬¸
 			
-			long start = System.currentTimeMillis();//Å¸ÀÌ¸Ó ½ÃÀÛ
-			System.out.println("Alphabet to exclude: "+ch);//±İÁö¾î Ãâ·Â
-			for(int i=0;i<5;i++) {//ÃÑ 5°³ÀÇ ¿¹¹®À» ¼ø¼­´ë·Î Ãâ·Â)
+			long start = System.currentTimeMillis();//íƒ€ì´ë¨¸ ì‹œì‘
+			System.out.println("Alphabet to exclude: "+ch);//ê¸ˆì§€ì–´ ì¶œë ¥
+			for(int i=0;i<5;i++) {//ì´ 5ê°œì˜ ì˜ˆë¬¸ì„ ìˆœì„œëŒ€ë¡œ ì¶œë ¥)
 				if(Error>10) {
 					System.out.println("You Made so many miss. Game Over!");
 					break;
 				}
-				System.out.println("\""+LP[i]+"\"");//¿¹¹Ã Ãô·Â
+				System.out.println("\""+LP[i]+"\"");//ì˜ˆë®¨ ì¸Œë ¥
 				
-				temp=src.nextLine();//À¯ÀúÀÇ Å¸ÀÌÇÎ
+				temp=src.nextLine();//ìœ ì €ì˜ íƒ€ì´í•‘
 				if(temp.contentEquals("END"))
 					return false;
-				Lptemp=LP[i].replaceAll(ch,"");//¿¹¹®¿¡¼­ ±İÁö ¾ËÆÄºª Á¦°Å
-				Lptemp=LP[i].replaceAll(Ch,"");//¿¹¹®¿¡¼­ ±İÁö ¾ËÆÄºª Á¦°Å
-				if(temp.contains(ch)||temp.contains(Ch)) {//±İÁö ¾ËÆÄºª À¯¹«È®ÀÎ
+				Lptemp=LP[i].replaceAll(ch,"");//ì˜ˆë¬¸ì—ì„œ ê¸ˆì§€ ì•ŒíŒŒë²³ ì œê±°
+				Lptemp=LP[i].replaceAll(Ch,"");//ì˜ˆë¬¸ì—ì„œ ê¸ˆì§€ ì•ŒíŒŒë²³ ì œê±°
+				if(temp.contains(ch)||temp.contains(Ch)) {//ê¸ˆì§€ ì•ŒíŒŒë²³ ìœ ë¬´í™•ì¸
 					System.out.println("Yout Typed Exclude Alphabet");
-					i--;//ÀÖÀ»½Ã ´Ù½Ã ÇÏ±â À§ÇØ Áõ°¡ ÇÏÁö ¾ÊÀ½
-					Error++;//¿À·ù È½¼ö Áõ°¡
-					continue;//¹ØÀÇ ³»¿ëÀ» ¹«½Ã
+					i--;//ìˆì„ì‹œ ë‹¤ì‹œ í•˜ê¸° ìœ„í•´ ì¦ê°€ í•˜ì§€ ì•ŠìŒ
+					Error++;//ì˜¤ë¥˜ íšŸìˆ˜ ì¦ê°€
+					continue;//ë°‘ì˜ ë‚´ìš©ì„ ë¬´ì‹œ
 				}
-				if(!temp.contentEquals(Lptemp)) {//¹®ÀÚ¿­ÀÇ ÀÏÄ¡¸¦ È®ÀÎ 
+				if(!temp.contentEquals(Lptemp)) {//ë¬¸ìì—´ì˜ ì¼ì¹˜ë¥¼ í™•ì¸ 
 					System.out.println("You Miss Typed!!");
 					i--;
 					Error++;
 					continue;
 				}
-				System.out.println("Good Answer!");//Á¤´äÀÓÀ» ¾Ë·ÁÁÜ
-				end=System.currentTimeMillis();//½Ã°£ ÃøÁ¤À» Á¾·áÇÔ
+				System.out.println("Good Answer!");//ì •ë‹µì„ì„ ì•Œë ¤ì¤Œ
+				end=System.currentTimeMillis();//ì‹œê°„ ì¸¡ì •ì„ ì¢…ë£Œí•¨
 				System.out.println((float)((end-start)/1000)+"seconds");
 			}
-			end=System.currentTimeMillis();//½Ã°£ ÃøÁ¤À» Á¾·áÇÔ
-			System.out.println("It took you a total of "+(float)((end-start)/1000)+" seconds to type everything.");//°É¸° ½Ã°£À» ¼Ò¼ıÁ¡À¸·Î Ç¥½ÃÇØÁÜ
-			time=(int)((end-start)/1000);//ÇØ´ç °É¸°½Ã°£À» µ¥¹ÌÁö °è»êÀ» À§ÇØ º¯È¯
+			end=System.currentTimeMillis();//ì‹œê°„ ì¸¡ì •ì„ ì¢…ë£Œí•¨
+			System.out.println("It took you a total of "+(float)((end-start)/1000)+" seconds to type everything.");//ê±¸ë¦° ì‹œê°„ì„ ì†Œìˆ«ì ìœ¼ë¡œ í‘œì‹œí•´ì¤Œ
+			time=(int)((end-start)/1000);//í•´ë‹¹ ê±¸ë¦°ì‹œê°„ì„ ë°ë¯¸ì§€ ê³„ì‚°ì„ ìœ„í•´ ë³€í™˜
 			
-			if(time<130)//½Ã°£ÀÌ 2ºĞ 10ÃÊ ³»¿¡¼­ °É¸®¸é µ¥¹ÌÁö¸¦ ÁÖÁö ¾Ê´Â´Ù.
+			if(time<130)//ì‹œê°„ì´ 2ë¶„ 10ì´ˆ ë‚´ì—ì„œ ê±¸ë¦¬ë©´ ë°ë¯¸ì§€ë¥¼ ì£¼ì§€ ì•ŠëŠ”ë‹¤.
 			damage+=0;
-			else {//¾Æ´Ò½Ã 2ºĞ¸¸Å­Àº Â÷ÇÏ°í ³ª¸ÓÁö ¸¦ 10À¸·Î ³ª´« ¸¸Å­ µ¥¹ÌÁö¸¦ ÁØ´Ù.
+			else {//ì•„ë‹ì‹œ 2ë¶„ë§Œí¼ì€ ì°¨í•˜ê³  ë‚˜ë¨¸ì§€ ë¥¼ 10ìœ¼ë¡œ ë‚˜ëˆˆ ë§Œí¼ ë°ë¯¸ì§€ë¥¼ ì¤€ë‹¤.
 				damage+= (time-120)/10;
 			}
 		
-		if(Error<5)damage+=0;//¿ÀÅ¸ È½¼ö°¡ 5È¸ ¹Ì¸¸ÀÌ¸é µ¥¹ÌÁö¸¦ ÁÖÁö ¾Ê´Â´Ù/
-		else if(damage<15)damage+=Error-5;//10È¸ ¹Ì¸¸ÀÌ¸é 5È¸¸¸Å­ Á¦ÇÏ°í µ¥¹ÌÁö¸¦ ÁØ´Ù
-		else damage+=10;//±×º¸´Ù Å¬½Ã ¾Õ¼± °ÍÀÇ ÃÖ´ë ´ë¹ÌÁöÀÎ 4¸¸Å­¸¸ µ¥¹ÌÁö¸¦ ÁØ´Ù.
-		if(damage>10)damage=10;//4º¸´Ù µ¥¹ÌÁö°¡ ´õ µé¾î°¡°Ô µÇ¸é ÀÌ¸¦ ¼öÁ¤ÇÑ´Ù.
+		if(Error<5)damage+=0;//ì˜¤íƒ€ íšŸìˆ˜ê°€ 5íšŒ ë¯¸ë§Œì´ë©´ ë°ë¯¸ì§€ë¥¼ ì£¼ì§€ ì•ŠëŠ”ë‹¤/
+		else if(damage<15)damage+=Error-5;//10íšŒ ë¯¸ë§Œì´ë©´ 5íšŒë§Œí¼ ì œí•˜ê³  ë°ë¯¸ì§€ë¥¼ ì¤€ë‹¤
+		else damage+=10;//ê·¸ë³´ë‹¤ í´ì‹œ ì•ì„  ê²ƒì˜ ìµœëŒ€ ëŒ€ë¯¸ì§€ì¸ 4ë§Œí¼ë§Œ ë°ë¯¸ì§€ë¥¼ ì¤€ë‹¤.
+		if(damage>10)damage=10;//4ë³´ë‹¤ ë°ë¯¸ì§€ê°€ ë” ë“¤ì–´ê°€ê²Œ ë˜ë©´ ì´ë¥¼ ìˆ˜ì •í•œë‹¤.
 		
-		Character.growHp(-damage);//µ¥¹ÌÁö¸¦ ¹İÈ¯ÇÑ´Ù.
+		Character.growHp(-damage);//ë°ë¯¸ì§€ë¥¼ ë°˜í™˜í•œë‹¤.
 		return true;
 	}
 }
