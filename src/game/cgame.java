@@ -1,22 +1,21 @@
-package Java;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 public class cgame {
 	public boolean main() {
 		int damage=0;
-		int cleartime=0;//Å¬¸®¾îÇÏ±â±îÁö °É¸° È½¼ö
-		int mode=0;//µÎ°¡Áö ³­ÀÌµµÁß ¸ğµå¸¦ °í¸¥´Ù.
- 		cgamebase c=new cgamebase();//µÑ´Ù ¹Ì¸® ¼±¾ğÀ»ÇØÁØ´Ù.
+		int cleartime=0;//í´ë¦¬ì–´í•˜ê¸°ê¹Œì§€ ê±¸ë¦° íšŸìˆ˜
+		int mode=0;//ë‘ê°€ì§€ ë‚œì´ë„ì¤‘ ëª¨ë“œë¥¼ ê³ ë¥¸ë‹¤.
+ 		cgamebase c=new cgamebase();//ë‘˜ë‹¤ ë¯¸ë¦¬ ì„ ì–¸ì„í•´ì¤€ë‹¤.
  		cgamehard h=new cgamehard();
  		Scanner src=new Scanner(System.in);
- 		//¼³¸í
+ 		//ì„¤ëª…
  		System.out.println("Welcome to Newton hall");
 		System.out.println("we prepare some crcuit game for you "+Character.getName());
 		System.out.println("We have a 2 mode of game");
 		System.out.println("1. just connect the crcuit from start to goal");
 		System.out.println("2. Keep the power level above 1 and connect the start to the goal ");
 		System.out.println("Please enter your choice(1. without power level, 2.with power level)");
-		//Àß¸øµÈ ÀÔ·ÂÀ» ¹«½ÃÇÏ°í ´Ù½Ã ÇÏµµ·Ï ÇÑ´Ù.
+		//ì˜ëª»ëœ ì…ë ¥ì„ ë¬´ì‹œí•˜ê³  ë‹¤ì‹œ í•˜ë„ë¡ í•œë‹¤.
 		while(mode!=1||mode!=2) {
 		
 			try {
@@ -37,14 +36,14 @@ public class cgame {
 		}
  		
 		if(cleartime!=-1) {
-		System.out.println("You tried "+cleartime+"times");//¿Ï·á±îÁö °É¸° ½ÃµµÈ½¼ö¸¦ Ãâ·Â½ÃÄÑÁØ´Ù.
-		if (cleartime<5)damage= 0;//3¹ø±îÁöÀÇ ½Ç¼ö´Â ¹«È¿·Î Ã³¸®ÇÑ´Ù.
-		else if(cleartime<13) damage =cleartime-5;// 4¹øÀÌ»óÀÇ ½Ç¼ö½Ã 3¸¸Å­ Â÷°¨ÇØ¼­ µ¥¹ÌÁö¸¦ ÁØ´Ù.
-		else damage= 8;//¸¸ÀÏ ÃÑ µ¥¹ÌÁö°¡ 3À» ³ÑÀ»°æ¿ì 3À¸·Î °íÁ¤ÇÑ´Ù.
+		System.out.println("You tried "+cleartime+"times");//ì™„ë£Œê¹Œì§€ ê±¸ë¦° ì‹œë„íšŸìˆ˜ë¥¼ ì¶œë ¥ì‹œì¼œì¤€ë‹¤.
+		if (cleartime<5)damage= 0;//3ë²ˆê¹Œì§€ì˜ ì‹¤ìˆ˜ëŠ” ë¬´íš¨ë¡œ ì²˜ë¦¬í•œë‹¤.
+		else if(cleartime<13) damage =cleartime-5;// 4ë²ˆì´ìƒì˜ ì‹¤ìˆ˜ì‹œ 3ë§Œí¼ ì°¨ê°í•´ì„œ ë°ë¯¸ì§€ë¥¼ ì¤€ë‹¤.
+		else damage= 8;//ë§Œì¼ ì´ ë°ë¯¸ì§€ê°€ 3ì„ ë„˜ì„ê²½ìš° 3ìœ¼ë¡œ ê³ ì •í•œë‹¤.
 		Character.growHp(-damage);
-		return true;//¼º°ø½Ã
+		return true;//ì„±ê³µì‹œ
 		}
-		else return false;//½ÇÆĞ½Ã
+		else return false;//ì‹¤íŒ¨ì‹œ
 	}
 	
 
