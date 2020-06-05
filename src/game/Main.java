@@ -2,7 +2,6 @@ import java.util.*;
 
 class Main {
 static String name;
-  static int hp = 50;
 	static boolean [] clear= new boolean [10];
 	static String [] Sname= {"GLC","Hyoam Chaple","Cheonmaji","Store","Alpha Stationery","Student Union","Hiddink Field","Oseok Hall","Newton Hall","Hyundong Hall"};
 	 public static void menu() {
@@ -56,7 +55,7 @@ static String name;
 				 }else if(check==1)
 					 System.out.println("Please re-enter your name.");
 			}
-			 new Character(name,hp); //set name, hp
+			 new Character(name); //set name, hp
 			 System.out.println("Name : "+Character.getName()+"\nHp : "+Character.getHp());
 			 for(;1==check()&&Character.getHp()>0;) {
 				 System.out.println("\nWhere should we go?");
