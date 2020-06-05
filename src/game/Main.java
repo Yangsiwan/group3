@@ -116,7 +116,7 @@ static String name;
 				}
         
 			 }
-			 if(Character.getHP()<0) {
+			 if(Character.getHp()<0) {
 				 System.out.println("Game is over");
 				 System.exit(0);
 			 }
