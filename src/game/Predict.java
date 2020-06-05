@@ -3,14 +3,14 @@ import java.util.*;
 public class Predict {
 	static boolean pass = true;
 	private static int correct = 0;
-	static int start = 1;
-
-	public static boolean pd() {
+	private static int start = 0;
+	private static int damage = 0;
+	private static int wrong = 0;
+	
+	public boolean pd() {
 		Match game = new Match();
 		Scanner key = new Scanner(System.in);
-		
-		int wrong = 0;
-		int damage = 0;
+
 
 		//Game description
 		while(pass) {
@@ -70,7 +70,7 @@ public class Predict {
 		}
 
 		if(start == 1 && correct > 1) damage = 0;
-		else if(start == 1 && correct < 1) damage = 5;
+		else if(start == 1 && correct < 2) damage = 5;
 
 		Character.growHp(-damage);
 		return true;
