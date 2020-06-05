@@ -118,15 +118,12 @@ static String name;
 			 }
 			 if(Character.getHP()<0) {
 				 System.out.println("Game is over");
+				 System.exit(0);
 			 }
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	 }
-	 public static void gameover() {
-		 System.out.println("\nGame over");
-		 System.exit(0);
 	 }
 	 public	static int check() {
 		 for(int i=0;i<10;i++) {
