@@ -6,6 +6,7 @@ public class Predict {
 	private static int start = 0;
 	private static int damage = 0;
 	private static int wrong = 0;
+	private static int played = 0;
 	
 	public boolean pd() {
 		Match game = new Match();
@@ -69,11 +70,19 @@ public class Predict {
 			}
 		}
 
-		if(start == 1 && correct > 1) damage = 0;
-		else if(start == 1 && correct < 2) damage = 5;
-
-		Character.growHp(-damage);
-		return true;
+		if(start == 1 && correct > 1) {
+			damage = 0;
+			Character.growHp(-damage);
+			return true;
+		}
+		else {
+			if(played == 0){
+				damage = 5;
+				Character.growHp(-damage);
+				played++;
+			}
+			return false;
+		}
 	}
 }
 
