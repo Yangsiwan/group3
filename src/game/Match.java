@@ -79,23 +79,23 @@ public class Match extends Predict {
 		if (team1 < team2) {
 			check = "Bethel";
 			try {
-				System.out.println("\nMatch has begun!");
+				System.out.println("\n[Bae]: Match has begun!");
 				Thread.sleep(800);
-				System.out.println("Vision has been pushing us since the beginning of the game.");
+				System.out.println("[Bae]: Vision has been pushing us since the beginning of the game.");
 				Thread.sleep(800);
-				System.out.println("There's a big difference between the two teams. It's not an easy game for Bethel.");
+				System.out.println("[Anh]: There's a big difference between the two teams. It's not an easy game for Bethel.");
 				Thread.sleep(800);
-				System.out.println("Oh, they have made a chance!");
+				System.out.println("[Bae]: Oh, they have made a chance!");
 				Thread.sleep(800);
-				System.out.println("Free space... one-on-one chance!\r\n");
+				System.out.println("[Anh]: Free space... one-on-one chance!\r\n");
 				Thread.sleep(800);
-				System.out.println("shoot!!!");
+				System.out.println("[Bae]: shoot!!!");
 				Thread.sleep(800);
-				System.out.println("Goal!!! Goal!!! Bethel have scored!");
+				System.out.println("[Anh]: Goal!!! Goal!!! Bethel have scored!");
 				Thread.sleep(800);
-				System.out.println("This is futsal. The ball is round, so you have to go all the way to find out.");
+				System.out.println("[Bae]: This is futsal. The ball is round, so you have to go all the way to find out.");
 				Thread.sleep(800);
-				System.out.println("Bethel players are flying around today!");
+				System.out.println("[Anh]: Bethel players are flying around today!");
 				Thread.sleep(800);
 				System.out.println("Matching");
 				Thread.sleep(800);
@@ -103,7 +103,7 @@ public class Match extends Predict {
 				Thread.sleep(800);
 				System.out.println("....");
 				Thread.sleep(800);
-				System.out.println("The game is over! A miracle has happened!");
+				System.out.println("[Bae]: The game is over! A miracle has happened!");
 				Thread.sleep(500);
 				System.out.println("Vision: " + team1 + " Bethel: " + team2);
 				Thread.sleep(1000);
@@ -111,7 +111,7 @@ public class Match extends Predict {
 			catch(InterruptedException e) {
 				return false ;
 			}
-			System.out.println("Bethel is taking the victory.\n.\n.\n.");
+			System.out.println("[Bae]: Bethel is taking the victory.\n.\n.\n.");
 		}
 		
 		//If users' input and team's name are same.
@@ -155,19 +155,19 @@ public class Match extends Predict {
 		if(team1 > team2) {
 			check = "Lothem";
 			try {
-				System.out.println("\nMatch has begun!");
+				System.out.println("\n[Bae]: Match has begun!");
 				Thread.sleep(800);
-				System.out.println("Both teams have similar performance. I have no idea who will win.");
+				System.out.println("[Bae]: Both teams have similar performance. I have no idea who will win.");
 				Thread.sleep(800);
-				System.out.println("Both teams are doing their best.");
+				System.out.println("[Anh]: Both teams are doing their best.");
 				Thread.sleep(800);
-				System.out.println("They are getting ready for corner kick.");
+				System.out.println("[Bae]: They are getting ready for corner kick.");
 				Thread.sleep(800);
-				System.out.println("Cross.");
+				System.out.println("[Anh]: Cross.");
 				Thread.sleep(800);
-				System.out.println("Header!!!");
+				System.out.println("[Bae]: Header!!!");
 				Thread.sleep(800);
-				System.out.println("Goal!!! Goal!!! Lothem scores successfully!");
+				System.out.println("[Anh]: Goal!!! Goal!!! Lothem scores successfully!");
 				Thread.sleep(800);
 				System.out.println("Matching");
 				Thread.sleep(800);
@@ -175,7 +175,7 @@ public class Match extends Predict {
 				Thread.sleep(800);
 				System.out.println("....");
 				Thread.sleep(800);
-				System.out.println("Match is over. It was the best game ever.");
+				System.out.println("[Bae]: Match is over. It was the best game ever.");
 				Thread.sleep(500);
 				System.out.println("Lothem: " + team1 + " Creation: " + team2);
 				Thread.sleep(1000);
@@ -183,25 +183,25 @@ public class Match extends Predict {
 			catch(InterruptedException e) {
 				return false ;
 			}
-			System.out.println("Lothem finally wins.\n.\n.\n.");
+			System.out.println("[Bae]: Lothem finally wins.\n.\n.\n.");
 		}
 		
 		if (team1 < team2) {
 			check = "Creation";
 			try {
-				System.out.println("\nMatch has begun!");
+				System.out.println("\n[Bae]: Match has begun!");
 				Thread.sleep(800);
-				System.out.println("Both teams have similar performance. I have no idea who will win.");
+				System.out.println("[Bae]: Both teams have similar performance. I have no idea who will win.");
 				Thread.sleep(800);
-				System.out.println("Both teams are doing their best.");
+				System.out.println("[Anh]: Both teams are doing their best.");
 				Thread.sleep(800);
-				System.out.println("They are getting ready for corner kick.");
+				System.out.println("[Anh]: They are getting ready for corner kick.");
 				Thread.sleep(800);
-				System.out.println("Cross.");
+				System.out.println("[Bae]: Cross.");
 				Thread.sleep(800);
-				System.out.println("Header!!!");
+				System.out.println("[Anh]: Header!!!");
 				Thread.sleep(800);
-				System.out.println("Goal!!! Goal!!! Creation scores successfully!");
+				System.out.println("[Bae]: Goal!!! Goal!!! Creation scores successfully!");
 				Thread.sleep(800);
 				System.out.println("Matching");
 				Thread.sleep(800);
@@ -209,7 +209,7 @@ public class Match extends Predict {
 				Thread.sleep(800);
 				System.out.println("....");
 				Thread.sleep(800);
-				System.out.println("Match is over. It was the best game ever.");
+				System.out.println("[Anh]: Match is over. It was the best game ever.");
 				Thread.sleep(500);
 				System.out.println("Lothem: " + team1 + " Creation: " + team2);
 				Thread.sleep(1000);
@@ -217,7 +217,7 @@ public class Match extends Predict {
 			catch(InterruptedException e) {
 				return false ;
 			}
-			System.out.println("Creaion finally wins.\n.\n.\n.");
+			System.out.println("[Bae]: Creaion finally wins.\n.\n.\n.");
 		}
 		
 		if(predict.equals(check)) {
@@ -260,21 +260,21 @@ public class Match extends Predict {
 		if(team1 > team2) {
 			check = "Grace";
 			try {
-				System.out.println("\nMatch has begun!");
+				System.out.println("\n[Bae]: Match has begun!");
 				Thread.sleep(800);
-				System.out.println("Both teams have similar performance. I have no idea who will win.");
+				System.out.println("[Bae]: Both teams have similar performance. I have no idea who will win.");
 				Thread.sleep(800);
-				System.out.println("Both teams are doing their best.");
+				System.out.println("[Anh]: Both teams are doing their best.");
 				Thread.sleep(800);
-				System.out.println("They are getting ready for corner kick.");
+				System.out.println("[Anh]: They are getting ready for corner kick.");
 				Thread.sleep(800);
-				System.out.println("Oops, there is an foul.");
+				System.out.println("[Bae]: Oops, there is an foul.");
 				Thread.sleep(800);
-				System.out.println("They Grace is preparing penalty kick.");
+				System.out.println("[Anh]: They Grace is preparing penalty kick.");
 				Thread.sleep(800);
-				System.out.println("Shoot!");
+				System.out.println("[Bae]: Shoot!");
 				Thread.sleep(800);
-				System.out.println("Goal!!! Goal!!! Grace scores successfully!");
+				System.out.println("[Anh]: Goal!!! Goal!!! Grace scores successfully!");
 				Thread.sleep(800);
 				System.out.println("Matching");
 				Thread.sleep(800);
@@ -282,7 +282,7 @@ public class Match extends Predict {
 				Thread.sleep(800);
 				System.out.println("....");
 				Thread.sleep(800);
-				System.out.println("Match is over. It was the best game ever.");
+				System.out.println("[Bae]: Match is over. It was the best game ever.");
 				Thread.sleep(500);
 				System.out.println("Grace: " + team1 + " International: " + team2);
 				Thread.sleep(1000);
@@ -290,27 +290,27 @@ public class Match extends Predict {
 			catch(InterruptedException e) {
 				return false ;
 			}
-			System.out.println("Grace finally wins.\n.\n.\n.");
+			System.out.println("[Bae]: Grace finally wins.\n.\n.\n.");
 		}
 		
 		if (team1 < team2) {
 			check = "International";
 			try {
-				System.out.println("\nMatch has begun!");
+				System.out.println("\n[Bae]: Match has begun!");
 				Thread.sleep(800);
-				System.out.println("Both teams have similar performance. I have no idea who will win.");
+				System.out.println("[Anh]: Both teams have similar performance. I have no idea who will win.");
 				Thread.sleep(800);
-				System.out.println("Both teams are doing their best.");
+				System.out.println("[Anh]: Both teams are doing their best.");
 				Thread.sleep(800);
-				System.out.println("They are getting ready for corner kick.");
+				System.out.println("[Bae]: They are getting ready for corner kick.");
 				Thread.sleep(800);
-				System.out.println("Oops, there is an foul.");
+				System.out.println("[Anh]: Oops, there is an foul.");
 				Thread.sleep(800);
-				System.out.println("They International is preparing penalty kick.");
+				System.out.println("[Bae]: They International is preparing penalty kick.");
 				Thread.sleep(800);
-				System.out.println("Shoot!");
+				System.out.println("[Anh]: Shoot!");
 				Thread.sleep(800);
-				System.out.println("Goal!!! Goal!!! International scores successfully!");
+				System.out.println("[Anh]: Goal!!! Goal!!! International scores successfully!");
 				Thread.sleep(800);
 				System.out.println("Matching");
 				Thread.sleep(800);
@@ -318,7 +318,7 @@ public class Match extends Predict {
 				Thread.sleep(800);
 				System.out.println("....");
 				Thread.sleep(800);
-				System.out.println("Match is over. It was the best game ever.");
+				System.out.println("[Bae]: Match is over. It was the best game ever.");
 				Thread.sleep(500);
 				System.out.println("Grace: " + team1 + " International: " + team2);
 				Thread.sleep(1000);
@@ -326,7 +326,7 @@ public class Match extends Predict {
 			catch(InterruptedException e) {
 				return false ;
 			}
-			System.out.println("International finally wins.\n.\n.\n.");
+			System.out.println("[Anh]: International finally wins.\n.\n.\n.");
 		}
 		if(predict.equals(check)) {
 			System.out.println("Your prediction is correct!\n");
