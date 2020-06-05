@@ -1,9 +1,7 @@
-package Java;
-
 public class cgamehard extends cgamebase{
-	static String ci=" +5 V ";//Àü¾Ğ
-	static int  v=6;//½ÃÀÛ Àü¾Ğ
-	public void printrule() {//±ÔÄ¢ ¼³¸í °íÁ¤ ºí·° »ı¼º
+	static String ci=" +5 V ";//ì „ì••
+	static int  v=6;//ì‹œì‘ ì „ì••
+	public void printrule() {//ê·œì¹™ ì„¤ëª… ê³ ì • ë¸”ëŸ­ ìƒì„±
 		int [][] example={{7,5,4},{6,3,7},{5,1,3}};
 		test[1][2]=7;
 		test[2][3]=7;
@@ -19,7 +17,7 @@ public class cgamehard extends cgamebase{
 		System.out.println("For Example:");
 		printall(3,example);
 	}
-	public void printall(int size,int test [][]) {//ÀüÃ¼ ÇöÁ¦ »óÈ² Ãâ·Â
+	public void printall(int size,int test [][]) {//ì „ì²´ í˜„ì œ ìƒí™© ì¶œë ¥
 		System.out.println("  GOAL  ");
 		for(int i=0;i<size;i++)
 			if(i==0)
@@ -37,13 +35,13 @@ public class cgamehard extends cgamebase{
 				for(int x=0;x<size;x++) {
 					if(x==0)
 						if(i==1)
-						System.out.printf("%d¤Ó",y);
-						else System.out.printf("  ¤Ó");
+						System.out.printf("%dã…£",y);
+						else System.out.printf("  ã…£");
 					else
-					System.out.printf("¤Ó");
+					System.out.printf("ã…£");
 					printBox(test[y][x],i);
 				}
-				System.out.println("¤Ó");
+				System.out.println("ã…£");
 			}
 		}
 		System.out.printf(nl);
@@ -53,7 +51,7 @@ public class cgamehard extends cgamebase{
 		System.out.println("  Start"+v+"V");
 	}
 	
-	public void printBox(int x,int i) {//Àü¾Ğºí·°À» Ãâ·ÂÇÏ±â À§ÇØ override
+	public void printBox(int x,int i) {//ì „ì••ë¸”ëŸ­ì„ ì¶œë ¥í•˜ê¸° ìœ„í•´ override
 		switch(x) {
 		case 0: System.out.printf(s); break;
 		case 1: if(i==0) System.out.printf(s);
@@ -85,7 +83,7 @@ public class cgamehard extends cgamebase{
 			break;
 		}
 	}
-	public int check(int idx,int idy,int ip) {//Àü¾ĞÆ÷ÇÔ Ã¼Å©¸¦ À§ÇØ overide
+	public int check(int idx,int idy,int ip) {//ì „ì••í¬í•¨ ì²´í¬ë¥¼ ìœ„í•´ overide
 		for(int y=0;y<size;y++) {
 			for(int x=0;x<size;x++) {
 				cm[y][x]=0;
@@ -106,7 +104,7 @@ public class cgamehard extends cgamebase{
 		}
 		return 1;
 	}
-	private static int checkC(int idx,int idy,int ip,int v) {//Àü¾ĞÃ¼Å©¸¦ °âÇØ override
+	private static int checkC(int idx,int idy,int ip,int v) {//ì „ì••ì²´í¬ë¥¼ ê²¸í•´ override
 		int c=0;
 		if(v<1) {
 			System.out.println("Lack of power");
