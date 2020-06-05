@@ -30,6 +30,7 @@ public class Predict {
 				Thread.sleep(1000);
 				System.out.println();
 				System.out.println("If you are ready, press 1.");
+				System.out.println("If you want to leave, press 0.");
 			}
 			catch(InterruptedException e) {
 				return false;
@@ -39,14 +40,16 @@ public class Predict {
 				System.out.print("Your Choice: ");
 				start = key.nextInt();
 				
-				//If users choose 0, quit game.
-			
-				if(start != 1){
+				if(start > 1 || start < 0){
 					System.out.println("\nWrong input!");
 				}
-				if(start == 1)break;
+				if(start == 1 || start == 0)break;
 			}
-			
+
+			//If users choose 0, quit game.
+			if(start == 0){
+				break;
+			}
 			//If users choose 1, It calls Game class
 			if(start == 1) {
 				System.out.println("Good Choice!");
@@ -75,7 +78,7 @@ public class Predict {
 			Character.growHp(-damage);
 			return true;
 		}
-		else {
+		else if(start == 1 && correct < 2){
 			if(played == 0){
 				damage = 5;
 				Character.growHp(-damage);
@@ -83,6 +86,7 @@ public class Predict {
 			}
 			return false;
 		}
+		return false;
 	}
 }
 
