@@ -3,9 +3,9 @@ package game;
 public class Character {
 	private static String name;
 	private static int hp;
-   public Character(String name, int hp) {
+   public Character(String name) {
 	   this.name = name;
-	   this.hp = hp;
+	   hp=50;
    }
    public Character() {
 	   this.name="null";
