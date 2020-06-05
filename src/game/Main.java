@@ -3,7 +3,7 @@ import java.util.*;
 class Main {
 static String name;
   static int hp = 50;
-	static boolean [] clear= new boolean [11];
+	static boolean [] clear= new boolean [10];
 	static String [] Sname= {"GLC","Hyoam Chaple","Cheonmaji","Store","Alpha Stationery","Student Union","Hiddink Field","Oseok Hall","Newton Hall","Hyundong Hall"};
 	 public static void menu() {
 		   System.out.println("===================[MAP]================");
@@ -123,11 +123,11 @@ static String name;
 						break;
 					case 8:
 						TypingGame tg=new TypingGame();
-                		clear[menu]=tg.tgmain();
+                		clear[menu-1]=tg.tgmain();
  						break;
 					case 9: //Newton Hall
 						cgame c=new cgame();
-					    clear[menu]=c.main();
+					    clear[menu-1]=c.main();
 					    break;
 					case 10: //Hyundong Hall
             		//	Hyeondong hd = new Hyeondong();
@@ -137,7 +137,8 @@ static String name;
 					//	System.out.println("Remaining Health: "+ch.getHp()+"\n");
 						break;
 				}
-        
+				System.out.println("Name : "+Character.getName()+"\nHp : "+Character.getHp());
+				 
 			 }
 			 if(Character.getHp()<0) {
 				 System.out.println("Game is over");
