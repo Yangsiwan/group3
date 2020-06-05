@@ -81,7 +81,7 @@ static String name;
 					}
 				}//menu--;
 				System.out.println(menu);
-				if(clear[menu]==true) {
+				if(clear[menu-1]==true) {
 					System.out.println("It is Already Cleared!!");
 					System.out.println("Please re-enter.");
 				}
