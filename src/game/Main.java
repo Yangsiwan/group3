@@ -45,8 +45,8 @@ static String name;
 					 System.out.println("You Typed Wrong Number!");
 			 }
 			 Character ch = new Character(name,hp); //set name, hp
-			 System.out.println("Name : "+ch.getName()+"\nHp : "+ch.getHp());
-			 for(;1==check()||hp>0;) {
+			 System.out.println("Name : "+Character.getName()+"\nHp : "+Character.getHp());
+			 for(;1==check()||Character.getHp()>0;) {
 				 System.out.println("\nWhere should we go?");
 				 System.out.println("0 : Save");
 				 for(int i=0;i<10;i++)
@@ -116,7 +116,7 @@ static String name;
 				}
         
 			 }
-			 if(hp<0) {
+			 if(Character.getHP()<0) {
 				 System.out.println("Game is over");
 			 }
 		} catch (InterruptedException e) {
