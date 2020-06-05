@@ -1,28 +1,26 @@
-package Java;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class cgamebase {
-	public static int size=4;//ÀüÃ¼ °ÔÀÓ ÆÇÀÇ Å©±â
-	public static String nl="   ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ";//ÀüÃ¼ Ä­ÀÇ Å©±â
-	public static String tl="¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ";
-	public String hl="  ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ";//ÇÑÄ­ÀÇ Å©±â
-	public static String s="          ";//ºóÄ­
-	public String cx="xxxxx ";//±İÁöÄ­
-	public String a="     ¤Ñ¤Ñ";//¿ìÃø ¿¬°á ºí·Ï
-	public String b="¤Ñ¤Ñ    ";//ÁÂÃø ¿¬°á ºí·°
-	public String c="    ¤Ó   ";//»óÇÏ ¿¬°á ºí·°
-	public String l="  ¤Ñ¤Ñ¤Ñ ";//ÁÂ¿ì ¿¬°áºí·°
-	public static int [][] test=new int [size][size];//test ºí·° 
-	public static int [][] cm=new int [size][size];//Ã¼Å©¿ë ºí·°
+	public static int size=4;//ì „ì²´ ê²Œì„ íŒì˜ í¬ê¸°
+	public static String nl="   ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡";//ì „ì²´ ì¹¸ì˜ í¬ê¸°
+	public static String tl="ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡";
+	public String hl="  ã…¡ã…¡ã…¡ã…¡ã…¡";//í•œì¹¸ì˜ í¬ê¸°
+	public static String s="          ";//ë¹ˆì¹¸
+	public String cx="xxxxx ";//ê¸ˆì§€ì¹¸
+	public String a="     ã…¡ã…¡";//ìš°ì¸¡ ì—°ê²° ë¸”ë¡
+	public String b="ã…¡ã…¡    ";//ì¢Œì¸¡ ì—°ê²° ë¸”ëŸ­
+	public String c="    ã…£   ";//ìƒí•˜ ì—°ê²° ë¸”ëŸ­
+	public String l="  ã…¡ã…¡ã…¡ ";//ì¢Œìš° ì—°ê²°ë¸”ëŸ­
+	public static int [][] test=new int [size][size];//test ë¸”ëŸ­ 
+	public static int [][] cm=new int [size][size];//ì²´í¬ìš© ë¸”ëŸ­
 
 
 	public int	menu () {
 		int check=0;
-		int cleartime=0;//Å¬¸®¾î È½¼ö ±â·Ï
-		int change[]=new int [2];//ÁÂÇ¥ ¹Ş±â
-		int shape=0;//ºí·Ï ¸ğ¾ç°íÁ¤
+		int cleartime=0;//í´ë¦¬ì–´ íšŸìˆ˜ ê¸°ë¡
+		int change[]=new int [2];//ì¢Œí‘œ ë°›ê¸°
+		int shape=0;//ë¸”ë¡ ëª¨ì–‘ê³ ì •
 		printrule();
 		for(;check==0;) {
 			printall(size,test);
@@ -38,7 +36,7 @@ public class cgamebase {
 					return -1;
 				}
 				
-			//ÀÔ·Â±¸¹®
+			//ì…ë ¥êµ¬ë¬¸
 			cleartime++;
 			
 			while(cleartime>0) {
@@ -96,7 +94,7 @@ public class cgamebase {
 	
 	
 	
-	public void printrule() {//±ÔÄ¢ÀÎ¼â
+	public void printrule() {//ê·œì¹™ì¸ì‡„
 		int [][] example={{2,5,4},{6,3,2},{5,1,3}};
 		
 		System.out.println("Easeymode");
@@ -111,7 +109,7 @@ public class cgamebase {
 		printall(3,example);
 	}
 
-	private int[] chooseC() {//ÁÂÇ¥ ¹Ş±â
+	private int[] chooseC() {//ì¢Œí‘œ ë°›ê¸°
 		int matrix[]=new int [2];
 		int check=0;
 		var src = new Scanner(System.in);
@@ -145,7 +143,7 @@ public class cgamebase {
 		
 	}
 	
-	private int chooseS() {//¸ğ¾ç ¹Ş±â
+	private int chooseS() {//ëª¨ì–‘ ë°›ê¸°
 		Scanner src = new Scanner(System.in);
 		int check=0;
 		int choice=0;
@@ -163,19 +161,19 @@ public class cgamebase {
 		return choice;
 	}
 	
-	private void printB() {//ºí·°º° Ãâ·Â
+	private void printB() {//ë¸”ëŸ­ë³„ ì¶œë ¥
 		for(int x=1;x<7;x++) {
 			System.out.println(x);
 			System.out.println(hl);
 			for(int i=0;i<3;i++) {
-			System.out.printf("¤Ó");
+			System.out.printf("ã…£");
 			printBox(x,i);
-			System.out.println("¤Ó");
+			System.out.println("ã…£");
 		}	
 		System.out.println(hl);
 		}
 	}
-	public void printall(int size,int test [][]) {//ÀüÃ¼ ÇöÁ¦ »óÈ² Ãâ·Â
+	public void printall(int size,int test [][]) {//ì „ì²´ í˜„ì œ ìƒí™© ì¶œë ¥
 		System.out.println("  GOAL  ");
 		for(int i=0;i<size;i++)
 			if(i==0)
@@ -193,13 +191,13 @@ public class cgamebase {
 				for(int x=0;x<size;x++) {
 					if(x==0)
 						if(i==1)
-						System.out.printf("%d¤Ó",y);
-						else System.out.printf("  ¤Ó");
+						System.out.printf("%dã…£",y);
+						else System.out.printf("  ã…£");
 					else
-					System.out.printf("¤Ó");
+					System.out.printf("ã…£");
 					printBox(test[y][x],i);
 				}
-				System.out.println("¤Ó");
+				System.out.println("ã…£");
 			}
 		}
 		System.out.printf(nl);
@@ -209,7 +207,7 @@ public class cgamebase {
 		System.out.println("  Start");
 	}
 	
-	public void printBox(int x,int i) {//°¢ Ä­º° Ãâ·Â
+	public void printBox(int x,int i) {//ê° ì¹¸ë³„ ì¶œë ¥
 		switch(x) {
 		case 0: System.out.printf(s); break;
 		case 1: if(i==0) System.out.printf(s);
@@ -239,7 +237,7 @@ public class cgamebase {
 		}
 	}
 	
-	public int check(int idx,int idy,int ip) {//¿¬°áÀ¯¹«¿Í ÀüÄ­»ç¿ë ¿©ºÎ È®ÀÎ
+	public int check(int idx,int idy,int ip) {//ì—°ê²°ìœ ë¬´ì™€ ì „ì¹¸ì‚¬ìš© ì—¬ë¶€ í™•ì¸
 		for(int y=0;y<size;y++) {
 			for(int x=0;x<size;x++) {
 				if(test[y][x]==7)
@@ -259,7 +257,7 @@ public class cgamebase {
 		return 1;
 	}
  
-	public static int checkC(int idx,int idy,int ip) {//¿¬°á¿©ºÎ È®ÀÎ
+	public static int checkC(int idx,int idy,int ip) {//ì—°ê²°ì—¬ë¶€ í™•ì¸
 		int c=0;
 		if(idx==size||idy==size||idx<0||idy<0) {
 			return 0;
