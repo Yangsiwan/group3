@@ -35,7 +35,7 @@
 			long start = System.currentTimeMillis();//타이머 시작
 			System.out.println("Alphabet to exclude: "+ch);//금지어 출력
 			for(int i=0;i<5;i++) {//총 5개의 예문을 순서대로 출력)
-				if(Error>10) {
+				if(Error>16) {
 					System.out.println("You Made so many miss. Game Over!");
 					break;
 				}
@@ -73,7 +73,7 @@
 			}
 		
 		if(Error<5)damage+=0;//오타 횟수가 5회 미만이면 데미지를 주지 않는다/
-		else if(damage<15)damage+=Error-5;//10회 미만이면 5회만큼 제하고 데미지를 준다
+		else if(Error<15)damage+=Error-5;//10회 미만이면 5회만큼 제하고 데미지를 준다
 		else damage+=10;//그보다 클시 앞선 것의 최대 대미지인 4만큼만 데미지를 준다.
 		if(damage>10)damage=10;//4보다 데미지가 더 들어가게 되면 이를 수정한다.
 		
