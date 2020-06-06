@@ -45,7 +45,7 @@ public class cgamebase {
 					
 					if(change[0]==-1){
 						break;
-					}else if(change[0]<0||change[0]>4||change[1]<0||change[1]>4||test[change[1]][change[0]]==7)
+					}else if(change[0]<0||change[0]>size-1||change[1]<0||change[1]>size-1||test[change[1]][change[0]]==7)
 						throw new Exception();
 						
 					else
