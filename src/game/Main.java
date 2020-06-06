@@ -1,9 +1,15 @@
-import java.util.*;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+import java.io.*;
+
 
 class Main {
-static String name;
-	static boolean [] clear= new boolean [10];
-	static String [] Sname= {"GLC","Hyoam Chaple","Cheonmaji","Store","Alpha Stationery","Student Union","Hiddink Field","Oseok Hall","Newton Hall","Hyundong Hall"};
+
+     static String name;
+     static int hp = 50;
+	 static int menu;
+	 static boolean [] clear = new boolean[11];
+	 static String [] Sname= {"GLC","Hyoam Chaple","Cheonmaji","Store","Alpha Stationery","Student Union","Hiddink Field","Oseok Hall","Newton Hall","Hyundong Hall"};
 	 public static void menu() {
 		   System.out.println("===================[MAP]================");
 		   System.out.println("| -----    -----                       |");
@@ -22,10 +28,9 @@ static String name;
 		   System.out.println("|             |    (3)    |            |");
 		   System.out.println("========================================");
 	   }
-	
-	public static void main(String[] args) { 
+
+	 public static void main(String[] args) throws InterruptedException { 
 		 int check=1;
-		 
 		 int menu=0;
 		 Scanner scn = new Scanner(System.in);
 			System.out.println("========================================");
@@ -55,7 +60,7 @@ static String name;
 				 }else if(check==1)
 					 System.out.println("Please re-enter your name.");
 			}
-			 new Character(name); //set name, hp
+			 Character ch = new Character(name,hp); //set name, hp
 			 System.out.println("Name : "+Character.getName()+"\nHp : "+Character.getHp());
 			 for(;1==check()&&Character.getHp()>0;) {
 				 System.out.println("\nWhere should we go?");
@@ -64,13 +69,12 @@ static String name;
 					 if(clear[i]==false)
 						 System.out.println(i+1+" : "+Sname[i]);
 			    menu();
-			    
 				System.out.print("Select place: ");
 				while(check==0) {
 					try {
-					menu=scn.nextInt();
-					scn.nextLine();
-					if(menu<0||menu>10) throw new MismatchException ();
+					 menu=scn.nextInt();
+					 scn.nextLine();
+					 if(menu<0||menu>10) throw new MismatchException ();
 					break;
 					}catch(InputMismatchException e){
 						System.out.println("You Put the Wrong Type!! please re-enter your choice!");		 
@@ -81,13 +85,35 @@ static String name;
 					}
 				}//menu--;
 				System.out.println(menu);
-				if(clear[menu-1]==true) {
+				if(menu!=0 && clear[menu-1]==true) {
 					System.out.println("It is Already Cleared!!");
 					System.out.println("Please re-enter.");
 				}
 				switch(menu) {
 					case 0:
                 		//SAVE
+						File file = new File("save.txt");
+						FileWriter writer = null;
+						try {
+				            // 기존 파일의 내용에 이어서 쓰려면 true를, 기존 내용을 없애고 새로 쓰려면 false를 지정한다.
+				            writer = new FileWriter(file, false);
+				            writer.write(Character.getName()+"\n");
+				            writer.write(Character.getHp()+"\n");
+				            for(int i = 0;i<11;i++) {
+				            	if(clear[i]==true) writer.write(1+"\n");
+				            	else writer.write(0+"\n");
+				            }
+				            writer.flush();
+				            System.out.println("DONE");
+				        } catch(IOException e) {
+				            e.printStackTrace();
+				        } finally {
+				            try {
+				                if(writer != null) writer.close();
+				            } catch(IOException e) {
+				                e.printStackTrace();
+				            }
+				        }
 						break;
 					case 1: //GLC
 						//hangman h=new hangman();
@@ -99,10 +125,14 @@ static String name;
 					//	b.game();
 						break;
 					case 3: //Cheonmaji
-					 //	Chunmaji.show();
-						break;
+					   Chunmaji chun = new Chunmaji();
+					   clear[menu-1]=chun.success();
+					   if(!clear[menu-1]) chun.menu();
+					   break;
 					case 4: //Store
-					//	Store.show();
+					   Store st = new Store();
+					   clear[menu-1]=st.success();
+					   if(!clear[menu-1]) st.show();
 						break;
 					case 5: //Alpha Store
 					 //	TicTac tic = new TicTac();
@@ -121,12 +151,12 @@ static String name;
 					//	System.out.println();
 						break;
 					case 8:
-						TypingGame tg=new TypingGame();
-                		clear[menu-1]=tg.tgmain();
+						//TypingGame tg=new TypingGame();
+                		//clear[menu-1]=tg.tgmain();
  						break;
 					case 9: //Newton Hall
-						cgame c=new cgame();
-					    clear[menu-1]=c.main();
+						//cgame c=new cgame();
+					    //clear[menu-1]=c.main();
 					    break;
 					case 10: //Hyundong Hall
             		//	Hyeondong hd = new Hyeondong();
