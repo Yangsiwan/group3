@@ -5,8 +5,8 @@ public class cgame {
 		int damage=0;
 		int cleartime=0;//클리어하기까지 걸린 횟수
 		int mode=0;//두가지 난이도중 모드를 고른다.
- 		cgamebase c=new cgamebase();//둘다 미리 선언을해준다.
- 		cgamehard h=new cgamehard();
+ 		
+
  		Scanner src=new Scanner(System.in);
  		//설명
  		System.out.println("Welcome to Newton hall");
@@ -16,16 +16,18 @@ public class cgame {
 		System.out.println("2. Keep the power level above 1 and connect the start to the goal ");
 		System.out.println("Please enter your choice(1. without power level, 2.with power level)");
 		//잘못된 입력을 무시하고 다시 하도록 한다.
-		while(mode!=1||mode!=2) {
+		while(mode==1||mode==2) {
 		
 			try {
 			mode=src.nextInt();
 		 	if(mode==1) { 
+		 		cgamebase c=new cgamebase();//둘다 미리 선언을해준다.
 		 		cleartime=c.menu();
 		 		break;
 		 		}
 		 	else if(mode==2){
-		 		cleartime=h.menu();
+		 		cgamehard c=new cgamehard();
+		 		cleartime=c.menu();
 		 		break;
 		 		}
 		 	else System.out.println("You Put the Wrong Number! please re-enter your choice!");
