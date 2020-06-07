@@ -1,3 +1,5 @@
+package main;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -10,29 +12,30 @@ public class TicTac {
 	private static ArrayList<Integer> playerPositions = new ArrayList<Integer>();
 	private static ArrayList<Integer> cashierPositions = new ArrayList<Integer>();
 	private static int lost = 0;
-
+	private static int played = 0;
+	private static int damage = 0;
+	
 	public boolean tt() {
-		int damage = 0;
 
 		try {
 			System.out.println("Cashier: Welcome to Alpha Store!");
 			Thread.sleep(1000);
 			System.out.println("Cashier: Here, we sell various office supplies.");
 			Thread.sleep(1000);
-			System.out.println(Character.getName()+": Wait, what is this?");
+			System.out.println("[" + Character.getName()+"]: Wait, what is this?");
 			Thread.sleep(1000);
 			System.out.println("Cashier: Ahhh, that is an old game called TicTacToe.");
 			Thread.sleep(1000);
-			System.out.println(Character.getName()+": Can I buy this?");
+			System.out.println("[" + Character.getName()+"]: Can I buy this?");
 			Thread.sleep(1000);
 			System.out.println("Cashier: Well, that is not for sale.");
 			Thread.sleep(1000);
-			System.out.println(Character.getName()+": But I want this game.");
+			System.out.println("[" + Character.getName()+"]: But I want this game.");
 			Thread.sleep(1000);
 			System.out.println("Cashier: Hmm... Ok, but here is the deal,\n\t If you beat the game with me, \n\t I will give it to you for free.");
 			Thread.sleep(1000);
 			System.out.println("Cashier: Only winning is the key. No tie.");
-			System.out.println(Character.getName()+": Got it!");
+			System.out.println("[" + Character.getName()+"]: Got it!");
 			Thread.sleep(1000);
 			System.out.println("Cashier: Here is the game rules.");
 			Thread.sleep(1000);
@@ -41,21 +44,24 @@ public class TicTac {
 			System.out.println("1. The game is played on a grid that's 3 squares by 3 squares.\n2. You are X, your friend is O. Players take turns putting their marks in empty squares.\n3. The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner.\n4. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.");
 			System.out.println("\nBasically, you need to make three in a row.");
 			Thread.sleep(1000);
+			System.out.println("\n[Example]");
+			System.out.print("X X X or ");
+			System.out.print("X or X\n         X      X\n         X        X");
 		}
 		catch (InterruptedException e) {
 			return false;
 		}
-		
-		//Game Board Form
+			
+			//Game Board Form
 		char[][] gameBoard = {{' ', '|', ' ', '|', ' '},
 				{'-', '+', '-', '+', '-'},
 				{' ', '|', ' ', '|', ' '},
 				{'-', '+', '-', '+', '-'},
 				{' ', '|', ' ', '|', ' '}};
-		
+			
 		System.out.println("\nGame Start!\n");
 		printGameBoard(gameBoard);
-		
+			
 		//keeps asking to put new inputs
 		while(true) {
 			Scanner scan = new Scanner(System.in);
@@ -67,10 +73,10 @@ public class TicTac {
 				System.out.println("Position is already taken! Enter other positions");
 				playerPos = scan.nextInt();
 			}
-			
+				
 			//call placeInput() method for player's inputs
 			placeInput(gameBoard, playerPos, "player");
-			
+				
 			String result = checkWinner();
 			//if result's length is greater than 0, program ends;
 			if(result.length()>0) {
@@ -80,16 +86,16 @@ public class TicTac {
 				System.out.println();
 				break;
 			}
-			
+				
 			//generates random numbers for inputs of Cashier
 			Random rand = new Random();
 			int cashPos = rand.nextInt(9) + 1;
-			//To check if chosen place is already taken and generates new numbers to input.
+			//To check if chosen place is already taken and generates ew numbers to input.
 			while(playerPositions.contains(cashPos) || cashierPositions.contains(cashPos)) {
 				cashPos = rand.nextInt(9) + 1;
 			}
 			placeInput(gameBoard, cashPos, "Cashier");
-			
+				
 			//call printGameBoard() after set place of 'X'
 			System.out.println();
 			printGameBoard(gameBoard);
@@ -105,10 +111,22 @@ public class TicTac {
 				break;
 			}
 		}
-		if(lost == 1)damage = 5;
-		else if(lost == 0)damage = 0;
-		Character.growHp(-damage);
-		return true;
+		
+		if(lost == 0) {
+			damage = 0;
+			Character.growHp(-damage);
+			return true;
+		}
+		else if(lost == 1){
+			if(played == 0){
+				damage = 5;
+				Character.growHp(-damage);
+				played++;
+			}
+			return false;
+		}
+		else
+			return false;
 	}
 	
 	//Print out gameBoard() method
@@ -177,7 +195,7 @@ public class TicTac {
 		//winning positions check that users' inputs contain these conditions
 		List topRow = Arrays.asList(1, 2, 3);
 		List midRow = Arrays.asList(4, 5, 6);
-		List botRow = Arrays.asList(6, 8, 9);
+		List botRow = Arrays.asList(7, 8, 9);
 		List leftCol = Arrays.asList(1, 4, 7);
 		List midCol = Arrays.asList(2, 5, 8);
 		List rightCol = Arrays.asList(3, 6, 9);
@@ -198,7 +216,7 @@ public class TicTac {
 		//read all the contents of List
 		for(List l : winningConditions) {
 			//when player fulfills winning condition
-			if(playerPositions.containsAll(l)) {
+			if(playerPositions.containsAll(l)) { 
 				return "Congratulations you won!";
 			}
 			else if(cashierPositions.containsAll(l)) {
