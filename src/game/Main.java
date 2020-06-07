@@ -123,20 +123,14 @@ class Main {
 				   //if(!clear[menu-1]) st.show();
 					break;
 				case 5: //Alpha Store
-				 //	TicTac tic = new TicTac();
-					//tic.tt();
-					//ch.growHp(tic.reduceHp());
-					//System.out.println("HP: " + ch.getHp());
-					//System.out.println();
+				 	//TicTac tic = new TicTac();
+					//clear[menu-1] = tic.tt();
 					break;
 				case 6: //Student Union
 					break;
 				case 7: //Hiddink Field
 				 	//Predict predict = new Predict();
-					//predict.pd();
-					//ch.growHp(predict.reduceHp());
-					//System.out.println("HP: " + ch.getHp());
-				//	System.out.println();
+					//clear[menu-1]=predict.pd();
 					break;
 				case 8:
 					TypingGame tg=new TypingGame();
